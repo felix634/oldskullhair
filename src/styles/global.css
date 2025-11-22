@@ -1,0 +1,26 @@
+/*
+  This file imports the base Tailwind styles and defines the custom
+  CSS for the smooth scroll fade-in effect.
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS for the fade-in scroll effect */
+[data-aos] {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translateY(20px);
+}
+
+/* Class applied by JavaScript when the element is in view */
+.aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ensure smooth scrolling across the page */
+html {
+  scroll-behavior: smooth;
+}
