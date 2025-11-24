@@ -1,16 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'], // <-- CRITICAL: Must include './src/**/*.{astro...}'
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
       colors: {
-        'primary-dark': '#3a3a3a', 
-        'accent': '#A0A0A0',      
+        // --- OLD SKULL EGYEDI SZÍNEK ---
+        'primary-dark': '#111111',       // Sötét Antracit / Fekete (fő szöveg, sötét háttér)
+        'accent-gold': '#FFC300',        // Arany / Sárga (CTA, kiemelés)
+        'bg-light': '#F8F8F8',           // Világos (szinte fehér) háttér
+        'accent-purple': '#5E2180',      // Másodlagos akcentus (opcionális, de benne van a logóban)
       },
       fontFamily: {
-        'sans': ['Playfair Display', 'serif'], 
-        'body': ['Inter', 'sans-serif'],
+        'title': ['Prata', 'serif'], // Címekhez (elegáns, vastag)
+        'body': ['Inter', 'sans-serif'], // Törzsszöveghez (letisztult, modern)
       },
+      // Keep existing animation and keyframes (Fade-in effekt megmarad)
       animation: {
         'fade-in': 'fadeIn 1s ease-out forwards',
       },
